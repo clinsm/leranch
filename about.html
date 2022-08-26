@@ -106,7 +106,7 @@ operations through internet marketing and other venues.
     </section>
     <section class="u-align-center u-clearfix u-image u-shading u-section-3" src="" data-image-width="1920" data-image-height="1440" id="sec-0e37">
       <div class="u-clearfix u-sheet u-sheet-1">
-        <h1 class="u-text u-text-default u-title u-text-1">Prospects</h1>
+        <h1 class="u-text u-text-default u-title u-text-1" id="prospects">Prospects</h1>
         <div class="u-align-center u-border-3 u-border-white u-line u-line-horizontal u-line-1"></div>
         <p class="u-large-text u-text u-text-variant u-text-2"> The company will
 be the only farm in the northern area of Mbuji Mayi to provide the local
@@ -225,7 +225,9 @@ cursor: pointer;
 .x_sign{
   transform: rotate(45deg) !important;
 }
-
+#prospects{
+  font-size: 3.5rem;
+}
 </style>
 
 <div class="translate_holder">
@@ -299,7 +301,9 @@ cursor: pointer;
         $('#arrow_icon').toggleClass("x_sign");
          e.preventDefault();
       });
-
+      if ($("#prospects").text.length > 9) {
+        $("#prospects").css("font-size", "3rem");
+      }
       });
       </script>
       <script type="text/javascript">
