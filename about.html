@@ -192,25 +192,50 @@ shortage, the implementation of agro-industrial parks is underway in different a
       </div>
     </section>
 
-<style media="screen">
-
+    <style class="u-overlap-style">.u-overlap:not(.u-sticky-scroll) .u-header {
+background-color: #ffffff !important
+}
 .translate_holder{
+padding: 20px;
+border-radius: 5px;
   position: fixed;
-  padding: 20px;
-  border-radius: 5px;
   z-index: 100;
   right: 10px;
   bottom: 10px;
-  background:#eaf7dc;
+  color: #ffffff;
+  background:#81C132;
   box-shadow: 10px 10px 20px 0px rgba(34,161,64,0.2);
 -webkit-box-shadow: 10px 10px 20px 0px rgba(34,161,64,0.2);
 -moz-box-shadow: 10px 10px 20px 0px rgba(34,161,64,0.2);
 }
+#translator_container{
+  display: none;
+}
+#language_arrow{
+cursor: pointer;
+}
+#arrow_icon{
+  display: inline-block;
+  font-size: 20px;
+}
+.plus_sign{
+    transform: rotate(0deg);
+}
+
+.x_sign{
+  transform: rotate(45deg) !important;
+}
+
 </style>
 
 <div class="translate_holder">
-  <div id="google_translate_element"></div>
+  <span id="language_arrow" style="font-size: 10px;"> <span id="arrow_icon" class="plus_sign">+ </span> LANGUAGE</span>
+  <div id="translator_container">
+    <div id="google_translate_element"></div>
+  </div>
 </div>
+
+
     <footer class="u-clearfix u-footer u-image u-footer" id="sec-434c" data-image-width="1980" data-image-height="924"><div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
           <div class="u-layout">
@@ -265,7 +290,18 @@ shortage, the implementation of agro-industrial parks is underway in different a
         <div class="u-border-1 u-border-palette-1-base u-expanded-width u-line u-line-horizontal u-line-1"></div>
         <p class="u-align-center u-text u-text-default u-text-1">© Copyright 2022. Le Ranch Resorts. All rights reserved.</p>
       </div></footer>
+      <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
+      <script type="text/javascript">
+      $(document ).ready(function() {
+      $("#language_arrow").click(function() {
+        $("#translator_container").toggle();
+        $('#arrow_icon').toggleClass("x_sign");
+         e.preventDefault();
+      });
+
+      });
+      </script>
       <script type="text/javascript">
       function googleTranslateElementInit() {
         new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
